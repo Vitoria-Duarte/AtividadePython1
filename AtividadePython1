@@ -1,0 +1,17 @@
+print('Bem vindo a loja da Vitória Esteffany')
+valorOriginal = float(input('Entre com o valor do Produto:'))   
+quantidade = int(input('Entre com quantidade do produto:'))     
+if 0 <= quantidade <10: 
+ desconto = 0
+elif 10 <= quantidade <100:
+ desconto = 0.5
+elif 100 <= quantidade < 1000:
+ desconto = 0.10
+else:
+ desconto = 0.15
+semDesconto = valorOriginal * quantidade
+comDesconto = semDesconto - semDesconto * desconto
+porcentagem = desconto * 100
+
+print('O valor sem desconto foi R${:.2f}'.format(semDesconto))
+print('O valor com desconto foi R${:.2f} (desconto R${}%)'.format(comDesconto, porcentagem))
